@@ -1,4 +1,4 @@
-# Sonet
+# Sonnet
 
 Decided to see if I could make an automated botnet using nothing more than shodan and the info from this article. Thanks to security bits for the [neat article](https://security-bits.de/posts/2018/11/11/exposed_sonos_interface.html).
 
