@@ -3,6 +3,8 @@ import os.path
 import shodan
 import sys
 
+###ADD CHECK FOR ERROR 400 SO WE DONT GET INCOMPATIBLE BOXES###
+
 try: input = raw_input
 except NameError: pass
 
