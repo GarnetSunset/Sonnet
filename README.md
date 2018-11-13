@@ -4,7 +4,7 @@ Decided to see if I could make an automated botnet using nothing more than shoda
 
 ## Legal Stuff
 
-Before you ask, no, I don't plan on using this myself, I made this purely for research and learning purposes, and I am not liable for any damage done using this tool, by others. 
+Before you ask, no, I don't plan on using this myself, I made this purely for research and learning purposes, and I am not liable for any damage done using this tool.
 
 ## Begging
 
